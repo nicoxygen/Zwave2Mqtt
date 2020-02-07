@@ -42,6 +42,19 @@ var SPIRIT_ZWAVE_PLUS = {
   }
 }
 
+// Fibaro sensor FGMS001/FGMS001-ZW5/FGSS101/FGFS10
+var FIBARO_SENSOR_FG = {
+  type: 'binary_sensor',
+  object_id: 'alarm',
+  values: ['271-4097-2048', '271-4097-2049', '271-4096-3072', '271-12289-2816'],
+  discovery_payload: {
+    command_topic: ["271-4097-2048", "271-4097-2049", "271-4096-3072", "271-12289-2816"],
+    state_topic:  ["271-4097-2048", "271-4097-2049", "271-4096-3072", "271-12289-2816"],
+    payload_off: 0,
+    payload_on: 255,
+  }
+}
+
 // var COVER = {
 //   type: 'cover',
 //   object_id: 'position',
